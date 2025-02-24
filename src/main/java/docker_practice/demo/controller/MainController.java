@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MainController {
 
     @GetMapping("/")
-    public String main() {
+    public String firstGet() {
         String name = "seung";
         int age = 20;
         return name + " is " + age + " years old";
