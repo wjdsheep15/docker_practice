@@ -23,7 +23,7 @@ public class MainController {
 
     @GetMapping("/cd/")
     public String thirdGet() {
-        return "CD completion";
+        return "CI/CD completed";
     }
 
 }
