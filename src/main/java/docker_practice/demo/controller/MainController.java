@@ -3,27 +3,27 @@ package docker_practice.demo.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Map;
+
 @RestController
 public class MainController {
 
     @GetMapping("/")
-    public String firstGet() {
-        String name = "seung";
-        int age = 20;
-        return name + " is " + age + " years old";
+    public Map<String, Object> firstGet() {
+        return Map.of("name", "first", "age", 30);
     }
 
 
     @GetMapping("/api/")
-    public String secondGet() {
+    public Map<String, Object> secondGet() {
         String name = "seung";
         int age = 20;
-        return name + " is " + age + " years old";
+        return Map.of("name", "second", "age", age);
     }
 
     @GetMapping("/cd/")
-    public String thirdGet() {
-        return "CI/CD completed";
+    public Map<String, Object> thirdGet() {
+        return Map.of("name", "third", "age", 20);
     }
 
 }
