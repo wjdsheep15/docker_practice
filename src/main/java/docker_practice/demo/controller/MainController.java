@@ -21,4 +21,9 @@ public class MainController {
         return name + " is " + age + " years old";
     }
 
+    @GetMapping("/cd/")
+    public String thirdGet() {
+        return "CD completion";
+    }
+
 }
